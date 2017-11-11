@@ -1,15 +1,15 @@
 # Saturation-Throughput
-Model using ns-3 simulator on Linux to simulate IEEE 802.11 CSMA/CA technic. It uses a mechanism called DCF (distributed coordinated function) which applies a binary exponential backoff to avoid collisions.
+Model using ns-3 simulator on Ubuntu to simulate IEEE 802.11 CSMA/CA technic. It uses a mechanism called DCF (distributed coordinated function) which applies a binary exponential backoff to avoid collisions.
 
 This model simulate from physical layer, through mac layer to application layer to simulate the work from Bianchi in 1998. The Bianchi's model can be viewed as followed:
 
 https://pdfs.semanticscholar.org/4a5c/f874e9469815113c7ea93ff97317bdb52a90.pdf
 
-Authors: Jiayi Zhang, Qi Lyu
+Authors: Kaichen Zhang, Xiaoyu Gao
 
-1. MATLAB Simulation Codes: project_simulation.m
+1. MATLAB Simulation Codes: simulation.m
 
-	The Simulation codes to simulate Bianchi’s model.
+	This file is used to simulate Bianchi’s model.
 
 	Operating System: tested on Mac. Should be able to run on Windows
 	Required Software: Matlab
@@ -20,7 +20,7 @@ Authors: Jiayi Zhang, Qi Lyu
 
 	2) The simulation will output the plot of saturation throughput versus number of stations.
 
-2. MATLAB Computation Codes: project_computation.m
+2. MATLAB Computation Codes: computation.m
 
 	Generate formula analysis to compute the results of Bianchi’s model.
 
@@ -41,7 +41,7 @@ Authors: Jiayi Zhang, Qi Lyu
 
 	/******** IMPORTANT: Pre-set ********/
 
-	Overwrite the source file “wifi-mac.cc”, “regular-wifi-mac.cc”, “dca-txop.cc”, and “dca-txop.h” in ns-3.26/src/wifi/model/ with the files provided in the folder “edited src files”, then type ./waf to build ns-3 environment. After successful build, project1.cc should be runnable.
+	Overwrite the source file “wifi-mac.cc”, “regular-wifi-mac.cc”, “dca-txop.cc”, and “dca-txop.h” in ns-3.27/src/wifi/model/ with the files provided in the folder “changed src files”, then type ./waf to build ns-3 environment. After successful build, project1.cc should be runnable.
 
 	Description of files
 
@@ -58,8 +58,3 @@ Authors: Jiayi Zhang, Qi Lyu
 	2) The simulation will output: a. the time first packet received by ap, b. the time last packet received by ap, c. the average actual throughput into ap.
 
 	3) If trace is enabled, terminal will output simultaneous throughput each 0.1 second in the simulation.
-
-	
-	
-
-	
