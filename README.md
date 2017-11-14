@@ -53,8 +53,16 @@ Authors: Kaichen Zhang, Xiaoyu Gao
 
 	• cxmax: the maximum contention window, it is computed by 2^m*W-1 by Bianchi. Default to be 255 (W = 32, m = 3). For example, type in ./waf —-run “scratch/project1 —-cwmax=1023”
 
+	• trafficRate: traffic rate(String) for each node with packet size. Default to be 1Mb/s. For example, type in ./waf —-run “scratch/project1 —-trafficRate=800kb/s”
+	
 	• trace: bool variable to enable/disable simulator schedule. If enabled, user can supervise the aggregate throughput of the access point for each 0.1 second. Default to be false. For example, type in ./waf —-run “scratch/project1 —-trace=true”
 
-	2) The simulation will output: a. the time first packet received by ap, b. the time last packet received by ap, c. the average actual throughput into ap.
+	2) The simulation will output: 
+	
+	• the time first packet received by ap 
+	
+	• the time last packet received by ap
+	
+	• the average actual throughput into ap
 
-	3) If trace is enabled, terminal will output simultaneous throughput each 0.1 second in the simulation.
+	3) If trace is enabled, terminal will output simultaneous throughput each 0.2 second in the simulation.
